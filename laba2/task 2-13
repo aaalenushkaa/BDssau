@@ -1,1 +1,4 @@
+/выбирает имя, фамилию и дату последнего вступившего/
+USE cd;
+SELECT surname, firstname, joindate FROM members WHERE joindate=(SELECT MAX(joindate) FROM members);
 
