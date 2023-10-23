@@ -1,1 +1,3 @@
-
+/выбирает самые дешёвые и самые дорогие объекты/
+USE cd;
+SELECT facility, membercost FROM facilities WHERE membercost=(SELECT MIN(membercost) FROM facilities) OR membercost=(SELECT MAX(membercost) FROM facilities);
